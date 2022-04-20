@@ -26,14 +26,20 @@ export default function HomeSlider() {
                 modules={[EffectFade, Navigation, Pagination]}>
 
                 <SwiperSlide>
-                    <img layout="fill" width="100%" height="650px" src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    <img layout="fill" width="100%" height="650px"
+                        src="https://wallpaperaccess.com/full/250472.jpg"
+                    />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img layout="fill" width="100%" height="650px" src="https://images.theconversation.com/files/393210/original/file-20210401-13-z6rl6z.jpg?ixlib=rb-1.1.0&rect=9%2C0%2C2994%2C1999&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" />
+                    <img layout="fill" width="100%" height="650px"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTxzjjRb7mpxVZ6b0lD9233Py4_z16LSb01Q&usqp=CAU"
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img layout="fill" width="100%" height="650px" src="https://www.daysoftheyear.com/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=pad%2Cheight=675%2Cmetadata=none%2Conerror=redirect%2Cq=85%2Cwidth=1200/wp-content/uploads/look-up-at-the-sky-day-1.jpg" />
+                    <img layout="fill" width="100%" height="650px"
+                        src="https://i.pinimg.com/originals/a4/6c/4d/a46c4dea15a013d3f779e8cf97a09a46.jpg"
+                    />
                 </SwiperSlide>
 
             </Swiper>
