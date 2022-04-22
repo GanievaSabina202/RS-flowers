@@ -14,7 +14,7 @@ export default function HomeFlowersCard() {
     return (
 
         <div className={styled.box}>
-            <div data-aos="zoom-in" className={styled.card}>
+            <div data-aos="zoom-in"  data-aos-duration="1000" className={styled.card}>
                 <div className={styled.imgBx}>
                     <img
                         width="300px"
@@ -28,7 +28,7 @@ export default function HomeFlowersCard() {
                 </div>
             </div>
 
-            <div data-aos="zoom-in" className={styled.card}>
+            <div data-aos="zoom-in"  data-aos-duration="1000" className={styled.card}>
                 <div className={styled.imgBx}>
                     <img
                         width="300px"
@@ -42,7 +42,7 @@ export default function HomeFlowersCard() {
                 </div>
             </div>
 
-            <div data-aos="zoom-in" className={styled.card}>
+            <div data-aos="zoom-in"  data-aos-duration="1000" className={styled.card}>
                 <div className={styled.imgBx}>
                     <img
                         width="300px"
