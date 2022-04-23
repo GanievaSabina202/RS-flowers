@@ -1,0 +1,95 @@
+.Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 90px 30px;
+}
+
+.ContentWrap {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.TextWrapper {
+    width: 80%;
+    text-align: justify;
+    color: #777;
+}
+
+.Title {
+    font-size: 53px;
+    line-height: 70px;
+    margin: 0;
+}
+
+.Paragraph {
+    font-size: 17px;
+    line-height: 28px;
+
+}
+
+.imgWrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    --_g: no-repeat linear-gradient(#000 0 0);
+    --_s: 10% /45% 45%;
+    --m:
+        var(--_g) left var(--_i, 0%) top var(--_s),
+        var(--_g) bottom var(--_i, 0%) left var(--_s),
+        var(--_g) top var(--_i, 0%) right var(--_s),
+        var(--_g) right var(--_i, 0%) bottom var(--_s);
+    -webkit-mask: var(--m);
+    mask: var(--m);
+    filter: grayscale();
+    transition: .3s linear;
+    cursor: pointer;
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.img:hover {
+    --_i: 10%;
+    filter: grayscale(0);
+}
+
+/* MEDIA  */
+
+@media(max-width:991.9px) {
+    .Wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .img{
+        width: 370px;
+    }
+
+    .ContentWrap {
+        padding: 20px 0px;
+    }
+
+    .Title {
+        text-align: center;
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .TextWrapper,
+    .ContentWrap,
+    .imgWrapper {
+        width: 100%;
+    }
+}
+
+@media(max-width:450px) {
+    .img{
+        width: 300px;
+    }
+}
+
