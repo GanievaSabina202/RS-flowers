@@ -18,17 +18,29 @@ export default function HomeGallery() {
             }}
             modules={[Pagination, Autoplay]}
             breakpoints={{
-                640: {
+                320: {
                     slidesPerView: 2,
-                    spaceBetween: 20,
+                    spaceBetween: 300,
+                },
+                350: {
+                    slidesPerView: 2,
+                    spaceBetween: 300,
+                },
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 130,
                 },
                 768: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
+                    slidesPerView: 3,
+                    spaceBetween: 10,
                 },
-                1024: {
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+                1199: {
                     slidesPerView: 5,
-                    spaceBetween: 50,
+                    spaceBetween: 130,
                 },
             }}
             className={styled.SwiperWrapper}
@@ -37,34 +49,42 @@ export default function HomeGallery() {
                 <img className={styled.ImgaWrap}
                     src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
+
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
                     src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
+
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
                     src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
+
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
                     src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
+
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
                     src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
+
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
                     src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
+
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
                     src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
+
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
                     src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
+
         </Swiper>
     )
 }

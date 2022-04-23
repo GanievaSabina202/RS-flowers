@@ -39,7 +39,7 @@ export const HeaderList = styled.ul`
         position: absolute;
         top: 0;
         width: 100%;
-        background: red;
+        background: ${({ theme }) => theme.colors.lightBlack};
         left: 0;
         height: 100vh;
         align-items: center;
