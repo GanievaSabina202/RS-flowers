@@ -21,6 +21,7 @@ import {
 
 
 export default function ContactUs() {
+   
     return (
         <Container>
             <ContactWrapper>
@@ -52,11 +53,13 @@ export default function ContactUs() {
                         <Space h="sm" />
                         <Button
                             color="gray"
-                            size="md">
+                            size="md"
+                            >
                             Send
                         </Button>
 
                     </Grid>
+
                 </Grid>
             </ContactWrapper>
         </Container>
