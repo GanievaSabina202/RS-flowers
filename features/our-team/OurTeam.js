@@ -1,9 +1,14 @@
 import React from 'react';
+import BackgroundImg from '../../share/components/BackgroundImg';
 import styled from './OurTeam.module.css';
 
 export default function OurTeam() {
     return (
         <>
+            <BackgroundImg 
+            title="Our Team"
+            bgImg="https://www.itl.cat/pngfile/big/136-1362245_wallpaper-flower-macro-branch-spring-apricot-buds-bokeh.jpg"
+            />
             <div className={styled.Wrapper}>
 
                 <div className={styled.cardContainer} >
