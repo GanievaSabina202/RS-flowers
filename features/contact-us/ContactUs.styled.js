@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const ContactWrapper = styled.div`
 padding: 100px 0px;
 `
-export const ImgWrapper = styled.div`
-`
+export const ImgWrapper = styled.div``
+
 export const Img = styled.img`
     --_g: no-repeat linear-gradient(#000 0 0);
     --_s: 10% /45% 45%;
