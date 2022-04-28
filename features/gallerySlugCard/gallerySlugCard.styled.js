@@ -61,3 +61,5 @@ display: flex;
 align-items: center;
 `
 
+export const TotalPrice = styled.h3`
+`;

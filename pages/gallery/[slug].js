@@ -12,7 +12,8 @@ import {
     PriceWrap,
     IconsPrice,
     IconsWrap,
-    SellWrapper
+    SellWrapper,
+    TotalPrice
 } from '../../features/gallerySlugCard/gallerySlugCard.styled';
 
 import AddIcon from '@mui/icons-material/Add';
@@ -21,6 +22,7 @@ import { Grid } from '@mui/material';
 
 const Gallery = () => {
     const [PriceCount, setPriceCount] = useState(0);
+    const [TotalCount, setTotalCount] = useState(1)
 
     const addCountHandler = () => {
         setPriceCount(PriceCount + 1);
@@ -77,6 +79,12 @@ const Gallery = () => {
                                 </PriceWrap>
                                 <Button>Add to Cart</Button>
                             </PriceBtnWrapper>
+
+                            <TotalPrice>
+                                Total Price :
+                                <IconsPrice> $</IconsPrice>
+                                {(PriceCount * TotalCount) * 40}
+                            </TotalPrice>
                         </SellWrapper>
                     </Grid>
 
