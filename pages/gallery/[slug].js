@@ -1,5 +1,19 @@
 import React, { useState } from 'react';
 import BackgroundImg from '../../share/components/BackgroundImg';
+
+import { db } from '../../config/firebase';
+
+import {
+    getFirestore,
+    collection,
+    doc,
+    addDoc,
+    getDoc,
+    getDocs,
+    query,
+    where
+} from '@firebase/firestore';
+
 import {
     Container,
     ImgWrapper,
@@ -20,7 +34,8 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Grid } from '@mui/material';
 
-const Gallery = () => {
+const Gallery = ({ data }) => {
+    console.log(data);
     const [PriceCount, setPriceCount] = useState(0);
     const [TotalCount, setTotalCount] = useState(1)
 
@@ -43,51 +58,53 @@ const Gallery = () => {
 
             <Container>
                 <Grid container>
+                    {data.map((item) => {
+                        return <>
+                            <Grid lg={6} md={6} sm={12} xs={12}>
+                                <ImgWrapper>
+                                    <Img
+                                        src={item.img}>
+                                    </Img>
+                                </ImgWrapper>
+                            </Grid>
 
-                    <Grid lg={6} md={6} sm={12} xs={12}>
-                        <ImgWrapper>
-                            <Img
-                                src="https://www.lampviews.com/wp-content/uploads/2020/11/Tips-for-flower-shop-lighting-design-2.jpeg">
-                            </Img>
-                        </ImgWrapper>
-                    </Grid>
+                            <Grid
+                                container
+                                direction="row"
+                                justifyContent="center"
+                                lg={6} md={6} sm={12} xs={12}>
+                                <SellWrapper>
+                                    <Content>
+                                        {item.name}
+                                    </Content>
+                                    <Price>
+                                        <IconsPrice>$</IconsPrice>
+                                        {item.price}
+                                    </Price>
+                                    <PriceBtnWrapper>
+                                        <PriceWrap>
+                                            <PriceShow>{PriceCount}</PriceShow>
+                                            <IconsWrap>
+                                                <AddIcon
+                                                    onClick={addCountHandler}
+                                                />
+                                                <RemoveIcon
+                                                    onClick={removeCountHandler}
+                                                />
+                                            </IconsWrap>
+                                        </PriceWrap>
+                                        <Button>Add to Cart</Button>
+                                    </PriceBtnWrapper>
 
-                    <Grid
-                        container
-                        direction="row"
-                        justifyContent="center"
-                        lg={6} md={6} sm={12} xs={12}>
-                        <SellWrapper>
-                            <Content>
-                                RHAPSODIES
-                            </Content>
-                            <Price>
-                                <IconsPrice>$</IconsPrice>
-                                40
-                            </Price>
-                            <PriceBtnWrapper>
-                                <PriceWrap>
-                                    <PriceShow>{PriceCount}</PriceShow>
-                                    <IconsWrap>
-                                        <AddIcon
-                                            onClick={addCountHandler}
-                                        />
-                                        <RemoveIcon
-                                            onClick={removeCountHandler}
-                                        />
-                                    </IconsWrap>
-                                </PriceWrap>
-                                <Button>Add to Cart</Button>
-                            </PriceBtnWrapper>
-
-                            <TotalPrice>
-                                Total Price :
-                                <IconsPrice> $</IconsPrice>
-                                {(PriceCount * TotalCount) * 40}
-                            </TotalPrice>
-                        </SellWrapper>
-                    </Grid>
-
+                                    <TotalPrice>
+                                        Total Price :
+                                        <IconsPrice> $</IconsPrice>
+                                        {(PriceCount * TotalCount) * item.price}
+                                    </TotalPrice>
+                                </SellWrapper>
+                            </Grid>
+                        </>
+                    })}
                 </Grid>
             </Container>
         </>
@@ -96,5 +113,23 @@ const Gallery = () => {
 export default Gallery;
 
 
+export async function getServerSideProps(context) {
 
+    const slug = context.query.slug;
+    const product = await getDocs(query(collection(db, "gallery"), where("name", '==', slug)));
+
+    const data = product.docs.map(doc => {
+        return {
+            ...doc.data(),
+            id: doc.id
+        }
+    })
+
+
+    return {
+        props: {
+            data
+        }
+    }
+}
 

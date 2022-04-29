@@ -1,12 +1,27 @@
 import React from 'react';
-
+// FIREBASE START
+import { db } from '../../config/firebase';
+import { collection, doc, getDocs } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
 import { useRouter } from "next/router";
-import BackgroundImg from '../../share/components/BackgroundImg';
-import { Container, Grid, } from '@mui/material';
-import { Content, Img, Wrapper } from '../../features/gallerycard/GalleryCard.styled';
+// FIREBASE END
 
-const Gallery = () => {
+import BackgroundImg from '../../share/components/BackgroundImg';
+
+import {
+    Container,
+    Grid,
+} from '@mui/material';
+import {
+    Content,
+    Img,
+    Wrapper
+} from '../../features/gallerycard/GalleryCard.styled';
+
+const Gallery = ({ data }) => {
+
     const router = useRouter();
+
     return (
         <>
             <BackgroundImg
@@ -16,25 +31,39 @@ const Gallery = () => {
 
             <Container fluid='true'>
                 <Grid container pt={2} pb={2}>
-                    <Grid p={1} lg={4} md={6} sm={6} xs={12}>
-                        <Wrapper
-                            onClick={() => router.push(`/gallery/a`)}
-                        >
-                            <Img src="https://www.about-flowers.co.uk/upload/mt/ab99/upload/files/images/homeGifts.jpg" />
-                            <Content>
-                                Filan gul
-                            </Content>
-                        </Wrapper>
-                    </Grid>
+                    {data.map((item) => {
+                        return <>
+                            <Grid p={1} lg={4} md={6} sm={6} xs={12}>
+                                <Wrapper
+                                    onClick={() => router.push(`/gallery/${item.name}`)}
+                                >
+                                    <Img src={item.img} />
+                                    <Content>
+                                        {item.name}
+                                    </Content>
+                                </Wrapper>
+                            </Grid>
+                        </>
+                    })}
                 </Grid>
             </Container>
         </>
     )
 }
 
-
-
-
-
+export async function getServerSideProps() {
+    const product = await getDocs(collection(db, "gallery"));
+    const data = product.docs.map(doc => {
+        return {
+            ...doc.data(),
+            id: doc.id
+        }
+    })
+    return {
+        props: {
+            data
+        }
+    }
+}
 
 export default Gallery
