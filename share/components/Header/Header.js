@@ -20,7 +20,7 @@ export default function Header() {
                 <HeaderListWeb>
                     <Hreff href="/">Home</Hreff>
                     <Hreff href="gallery">Gallery</Hreff>
-                    <Hreff href="about-us">About Us</Hreff>
+                    <Hreff href="aboutus">About Us</Hreff>
                     <Hreff href="our-team">Our Team</Hreff>
                     <Hreff href="contact-us">Contact Us</Hreff>
                 </HeaderListWeb>
