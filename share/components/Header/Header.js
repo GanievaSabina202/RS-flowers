@@ -10,7 +10,7 @@ export default function Header() {
             <Headers>
                 <Logo href="/">
                     <Img
-                        src='/images/logo.png' />
+                        src='/images/logo.png' alt='nsb' />
                     <DensityMediumIcons
                         onClick={() => {
                             setNavbar(!Navbar)

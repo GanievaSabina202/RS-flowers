@@ -37,7 +37,7 @@ const Gallery = ({ data }) => {
                                 <Wrapper
                                     onClick={() => router.push(`/gallery/${item.name}`)}
                                 >
-                                    <Img src={item.img} />
+                                    <Img src={item.img} alt=""/>
                                     <Content>
                                         {item.name}
                                     </Content>

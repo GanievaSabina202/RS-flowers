@@ -47,42 +47,42 @@ export default function HomeGallery() {
         >
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
-                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
+                   alt="sds" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
 
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
-                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
+                   alt="sbews" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
 
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
-                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
+                   alt="swbs" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
 
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
-                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
+                   alt="swbs" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
 
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
-                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
+                   alt="sbs" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
 
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
-                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
+                   alt="sbs" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
 
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
-                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
+                   alt="sbs" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
 
             <SwiperSlide>
                 <img className={styled.ImgaWrap}
-                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
+                   alt="sbs" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pink-stocks-high-res-stock-photography-121745471-1544729676.jpg?crop=0.444xw:1.00xh;0.114xw,0&resize=480:*" />
             </SwiperSlide>
 
         </Swiper>

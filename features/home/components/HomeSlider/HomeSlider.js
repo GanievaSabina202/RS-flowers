@@ -40,7 +40,7 @@ export default function HomeSlider() {
                     <SliderWrapper>
                         <SliderOvarlay />
                         <Img
-                            src="https://wallpapercave.com/wp/wp3054079.jpg"
+                           alt='hs' src="https://wallpapercave.com/wp/wp3054079.jpg"
                         />
                         <SliderContentWrapper>
                             <SliderContent>Go after your dream</SliderContent>
@@ -53,7 +53,7 @@ export default function HomeSlider() {
                     <SliderWrapper>
                         <SliderOvarlay />
                         <Img
-                            src="https://wallpaperaccess.com/full/1996541.jpg"
+                           alt='hs' src="https://wallpaperaccess.com/full/1996541.jpg"
                         />
                         <SliderContentWrapper>
                             <SliderContent>Smile</SliderContent>
@@ -66,7 +66,7 @@ export default function HomeSlider() {
                     <SliderWrapper>
                         <SliderOvarlay />
                         <Img
-                            src="https://wallpaperaccess.com/full/733121.jpg"
+                           alt='hs' src="https://wallpaperaccess.com/full/733121.jpg"
                         />
                         <SliderContentWrapper>
                             <SliderContent>One day you win</SliderContent>

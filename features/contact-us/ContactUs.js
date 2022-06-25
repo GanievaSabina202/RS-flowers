@@ -36,6 +36,7 @@ export default function ContactUs() {
                         <Grid lg={6} md={6} sm={12} xs={12}>
                             <ImgWrapper>
                                 <Img
+                                    alt="Contact"
                                     src="https://www.lampviews.com/wp-content/uploads/2020/11/Tips-for-flower-shop-lighting-design-2.jpeg">
                                 </Img>
                             </ImgWrapper>

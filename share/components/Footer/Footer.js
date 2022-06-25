@@ -121,7 +121,7 @@ export default function Footer() {
                                 </ListItem>
                             </SosialNetwork>
                         </UlWrapper>
-                        <BgImg src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/h1-img-2.png" />
+                        <BgImg alt="footer" src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/h1-img-2.png" />
                     </Grid>
                 </Grid>
             </Container>
