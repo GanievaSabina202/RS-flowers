@@ -1,5 +1,4 @@
 import React from "react";
-import Image from 'next/image';
 import BackgroundImg from "../../share/components/BackgroundImg";
 import styled from "./AboutUs.module.css";
 
@@ -17,12 +16,11 @@ export default function AboutUs({ data }) {
               <div className={styled.ContentWrap}>
                 <div className={styled.TextWrapper}>
                   <h5 className={styled.Title}>{item.name}</h5>
-                  <p className={styled.Paragraph}>{item.textarea}</p>
+                  <p className={styled.Paragraph}>{item.desc}</p>
                 </div>
               </div>
               <div className={styled.imgWrapper}>
-                {/* <Image className={styled.img}  alt=""/> */}
-                <img src={item.img} className={styled.img} alt="aa" />
+                <img src={item.img} className={styled.img} alt={item.name} />
               </div>
             </div>
           </>

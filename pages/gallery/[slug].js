@@ -35,7 +35,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import { Grid } from '@mui/material';
 
 const Gallery = ({ data }) => {
-    console.log(data);
+    console.log(data,"Slug");
     const [PriceCount, setPriceCount] = useState(0);
     const [TotalCount, setTotalCount] = useState(1)
 
@@ -79,7 +79,7 @@ const Gallery = ({ data }) => {
                                     </Content>
                                     <Price>
                                         <IconsPrice>$</IconsPrice>
-                                        {item.price}
+                                        {item.desc}
                                     </Price>
                                     <PriceBtnWrapper>
                                         <PriceWrap>
@@ -99,7 +99,7 @@ const Gallery = ({ data }) => {
                                     <TotalPrice>
                                         Total Price :
                                         <IconsPrice> $</IconsPrice>
-                                        {(PriceCount * TotalCount) * item.price}
+                                        {(PriceCount * TotalCount) * item.desc}
                                     </TotalPrice>
                                 </SellWrapper>
                             </Grid>

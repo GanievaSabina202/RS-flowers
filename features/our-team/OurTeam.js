@@ -25,7 +25,7 @@ export default function OurTeam({ data }) {
                                     <div className={styled.ContentWrap}>
                                         <h5 className={styled.h2}>{item.name}</h5>
                                         <p className={styled.desc}>
-                                            {item.title}
+                                            {item.desc}
                                         </p>
                                     </div>
                                 </div>
