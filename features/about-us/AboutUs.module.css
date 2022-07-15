@@ -48,8 +48,7 @@
     mask: var(--m);
     filter: grayscale();
     transition: .3s linear;
-    cursor: pointer;
-    width: 500px;
+    width: 600px;
     height: auto;
     object-fit: cover;
 }

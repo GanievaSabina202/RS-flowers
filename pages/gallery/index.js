@@ -16,11 +16,6 @@ import {
 } from "../../features/gallerycard/GalleryCard.styled";
 
 const Gallery = ({ data }) => {
-
-    useEffect(()=>{
-        console.log(data,'data');
-    })
-
   const router = useRouter();
   return (
     <>
@@ -36,7 +31,7 @@ const Gallery = ({ data }) => {
               <>
                 <Grid p={1} lg={4} md={6} sm={6} xs={12}>
                   <Wrapper onClick={() => router.push(`/gallery/${item.name}`)}>
-                    <Img src={item.img} alt="" />
+                    <Img src={item.img} alt={item.name} />
                     <Content>{item.name}</Content>
                   </Wrapper>
                 </Grid>

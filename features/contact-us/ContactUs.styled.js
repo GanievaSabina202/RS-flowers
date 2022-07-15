@@ -17,8 +17,7 @@ export const Img = styled.img`
     mask: var(--m);
     filter: grayscale();
     transition: .3s linear;
-    cursor: pointer;
-    width: 490px;
+    width: 500px;
     height: auto;
     object-fit: cover;
     &:hover{

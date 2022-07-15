@@ -43,17 +43,17 @@ export default function ContactUs() {
                         </Grid>
 
                         <Grid lg={6} md={6} sm={12} xs={12}>
-                            <Input placeholder="Your email"
+                            <Input placeholder="Name"
                                 radius="md"
                                 size="sm"
                             />
                             <Space h="sm" />
-                            <Input placeholder="Your email"
+                            <Input placeholder="Email"
                                 radius="md"
                                 size="sm"
                             />
                             <Space h="sm" />
-                            <Textarea placeholder="Your comment"
+                            <Textarea placeholder="Comment"
                                 radius="md"
                                 required
                             />

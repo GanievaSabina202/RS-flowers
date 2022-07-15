@@ -18,7 +18,7 @@ export default function OurTeam({ data }) {
                                 <div className={styled.front}>
                                     <img className={styled.img}
                                         src={item.img}
-                                        alt="sn"
+                                        alt={item.name}
                                     />
                                 </div>
                                 <div className={styled.back}>

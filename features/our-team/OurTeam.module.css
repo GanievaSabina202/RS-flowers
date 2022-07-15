@@ -21,10 +21,11 @@
 .cardContainer,
 .front, .back {
     margin: 0 auto;
-    width: 250px;
+    width: 350px;
     height: 345px;
     border-radius: 4px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .card {
@@ -58,6 +59,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 
