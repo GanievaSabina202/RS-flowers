@@ -14,8 +14,20 @@ import {
   Img,
   Wrapper,
 } from "../../features/gallerycard/GalleryCard.styled";
+import Paginations from "../../share/components/Paginations/Paginations";
 
 const Gallery = ({ data }) => {
+   // PAGINATION
+   const [page, setPage] = useState(1);
+   const postsPerPage = Math.ceil(9);
+   const last_page = Math.ceil(data.length / postsPerPage);
+   const indexOfLastPost = page * postsPerPage;
+   const indexOfFirstPost = indexOfLastPost - postsPerPage;
+   const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
+   const handleChange = (event, value) => {
+     setPage(value);
+   };
+ 
   const router = useRouter();
   return (
     <>
@@ -26,7 +38,7 @@ const Gallery = ({ data }) => {
 
       <Container fluid="true">
         <Grid container pt={2} pb={2}>
-          {data.map((item) => {
+          {currentPosts.map((item) => {
             return (
               <>
                 <Grid p={1} lg={4} md={6} sm={6} xs={12}>
@@ -39,6 +51,21 @@ const Gallery = ({ data }) => {
             );
           })}
         </Grid>
+
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-evenly"
+          alignItems="center"
+          m={5}
+        >
+          <Paginations
+            postsPerPage={last_page}
+            page={page}
+            handleChange={handleChange}
+          />
+        </Grid>
+
       </Container>
     </>
   );
