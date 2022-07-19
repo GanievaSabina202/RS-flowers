@@ -33,21 +33,33 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { Grid } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { addToBasket } from "../../features/basket/Basket";
 
 const Gallery = ({ data }) => {
-  const [PriceCount, setPriceCount] = useState(0);
+  const [PriceCount, setPriceCount] = useState(1);
   const [TotalCount, setTotalCount] = useState(1);
+
+  const basketSelector = useSelector((state) => state.basket.baskets);
+  console.log(basketSelector);
+  const dispatch = useDispatch();
+
+  const addTobas = (item) => {
+    dispatch(addToBasket(item));
+    localStorage.setItem("item", JSON.stringify([{...item}]));
+  };
 
   const addCountHandler = () => {
     setPriceCount(PriceCount + 1);
   };
 
   const removeCountHandler = () => {
-    if (PriceCount === 0) {
+    if (PriceCount === 1) {
       return;
     }
     setPriceCount(PriceCount - 1);
   };
+
   return (
     <>
       <BackgroundImg
@@ -89,7 +101,9 @@ const Gallery = ({ data }) => {
                           <RemoveIcon onClick={removeCountHandler} />
                         </IconsWrap>
                       </PriceWrap>
-                      <Button>Add to Cart</Button>
+                      <Button onClick={() => addTobas(item)}>
+                        Add to Cart
+                      </Button>
                     </PriceBtnWrapper>
 
                     <TotalPrice>

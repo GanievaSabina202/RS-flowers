@@ -29,6 +29,7 @@ export default function Header() {
           <Hreff href="/aboutus">About Us</Hreff>
           <Hreff href="/our-team">Our Team</Hreff>
           <Hreff href="/contact-us">Contact Us</Hreff>
+          <Hreff href="/basket">Basket</Hreff>
         </HeaderListWeb>
         {Navbar && (
           <HeaderList>
@@ -37,6 +38,7 @@ export default function Header() {
             <Hreff href="/">About Us</Hreff>
             <Hreff href="/">Our Team</Hreff>
             <Hreff href="/">Contact Us</Hreff>
+            <Hreff href="/basket">Basket</Hreff>
           </HeaderList>
         )}
       </Headers>
