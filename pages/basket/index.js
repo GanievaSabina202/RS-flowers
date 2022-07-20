@@ -4,8 +4,7 @@ const Index = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("item"));
-    console.log("itemss", items);
+    const items = JSON.parse(localStorage.getItem("data"));
     if (items) {
       setItems(items);
     }

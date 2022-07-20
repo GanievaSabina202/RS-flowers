@@ -6,7 +6,6 @@ const initialState = {
       JSON.parse(localStorage.getItem("basket"))) ||
     [],
 };
-
 export const basketSlice = createSlice({
   name: "basket",
   initialState,
@@ -16,6 +15,5 @@ export const basketSlice = createSlice({
     },
   },
 });
-
 export const { addToBasket } = basketSlice.actions;
 export default basketSlice.reducer;

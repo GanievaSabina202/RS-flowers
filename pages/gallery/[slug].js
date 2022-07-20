@@ -33,20 +33,14 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { Grid } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { addToBasket } from "../../features/basket/Basket";
 
 const Gallery = ({ data }) => {
   const [PriceCount, setPriceCount] = useState(1);
   const [TotalCount, setTotalCount] = useState(1);
 
-  const basketSelector = useSelector((state) => state.basket.baskets);
-  console.log(basketSelector);
-  const dispatch = useDispatch();
-
   const addTobas = (item) => {
-    dispatch(addToBasket(item));
-    localStorage.setItem("item", JSON.stringify([{...item}]));
+    let productsData = JSON.parse(localStorage.getItem("data")) || [];
+    localStorage.setItem("data", JSON.stringify([...productsData, item]));
   };
 
   const addCountHandler = () => {
