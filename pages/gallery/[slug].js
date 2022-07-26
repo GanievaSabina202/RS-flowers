@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BackgroundImg from "../../share/components/BackgroundImg";
 
 import { db } from "../../config/firebase";
@@ -33,14 +33,32 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { Grid } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { addToBasket, fillBasket } from "../../features/basket/Basket";
 
 const Gallery = ({ data }) => {
   const [PriceCount, setPriceCount] = useState(1);
   const [TotalCount, setTotalCount] = useState(1);
 
+  const dispatch = useDispatch();
+  const basket = useSelector((state) => state.basket.basket);
+
   const addTobas = (item) => {
-    let productsData = JSON.parse(localStorage.getItem("data")) || [];
-    localStorage.setItem("data", JSON.stringify([...productsData, item]));
+    // localStorage.setItem("data", JSON.stringify([...productsData, item]));
+    const cart = localStorage.getItem("data")
+      ? JSON.parse(localStorage.getItem("data"))
+      : [];
+
+    const duplicate = cart.filter((cartitem) => cartitem.id === item.id);
+    if (duplicate.length === 0) {
+      const productToAdd = {
+        ...item,
+        count: 1,
+      };
+      cart.push(productToAdd);
+      localStorage.setItem("data", JSON.stringify(cart));
+      dispatch(addToBasket(item));
+    }
   };
 
   const addCountHandler = () => {

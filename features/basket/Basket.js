@@ -13,7 +13,10 @@ export const basketSlice = createSlice({
     addToBasket: (state, action) => {
       state.baskets = [...state.baskets, action.payload];
     },
+    fillBasket: (state, action) => {
+      state.baskets = action.payload
+  },
   },
 });
-export const { addToBasket } = basketSlice.actions;
+export const { addToBasket,fillBasket } = basketSlice.actions;
 export default basketSlice.reducer;
