@@ -4,7 +4,6 @@ import BackgroundImg from "../../share/components/BackgroundImg";
 import { db } from "../../config/firebase";
 
 import {
-  getFirestore,
   collection,
   doc,
   addDoc,
@@ -20,31 +19,20 @@ import {
   Img,
   Content,
   Price,
-  PriceBtnWrapper,
   Button,
-  PriceShow,
-  PriceWrap,
   IconsPrice,
-  IconsWrap,
   SellWrapper,
-  TotalPrice,
 } from "../../features/gallerySlugCard/gallerySlugCard.styled";
 
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
 import { Grid } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBasket, fillBasket } from "../../features/basket/Basket";
 
 const Gallery = ({ data }) => {
-  const [PriceCount, setPriceCount] = useState(1);
-  const [TotalCount, setTotalCount] = useState(1);
-
   const dispatch = useDispatch();
   const basket = useSelector((state) => state.basket.basket);
 
   const addTobas = (item) => {
-    // localStorage.setItem("data", JSON.stringify([...productsData, item]));
     const cart = localStorage.getItem("data")
       ? JSON.parse(localStorage.getItem("data"))
       : [];
@@ -59,17 +47,6 @@ const Gallery = ({ data }) => {
       localStorage.setItem("data", JSON.stringify(cart));
       dispatch(addToBasket(item));
     }
-  };
-
-  const addCountHandler = () => {
-    setPriceCount(PriceCount + 1);
-  };
-
-  const removeCountHandler = () => {
-    if (PriceCount === 1) {
-      return;
-    }
-    setPriceCount(PriceCount - 1);
   };
 
   return (
@@ -105,23 +82,7 @@ const Gallery = ({ data }) => {
                       <IconsPrice>$</IconsPrice>
                       {item.desc}
                     </Price>
-                    <PriceBtnWrapper>
-                      <PriceWrap>
-                        <PriceShow>{PriceCount}</PriceShow>
-                        <IconsWrap>
-                          <AddIcon onClick={addCountHandler} />
-                          <RemoveIcon onClick={removeCountHandler} />
-                        </IconsWrap>
-                      </PriceWrap>
-                      <Button onClick={() => addTobas(item)}>
-                        Add to Cart
-                      </Button>
-                    </PriceBtnWrapper>
-
-                    <TotalPrice>
-                      Total Price :<IconsPrice> $</IconsPrice>
-                      {PriceCount * TotalCount * item.desc}
-                    </TotalPrice>
+                    <Button onClick={() => addTobas(item)}>Add to Cart</Button>
                   </SellWrapper>
                 </Grid>
               </>
